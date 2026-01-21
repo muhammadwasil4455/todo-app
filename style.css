@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+
+.semi-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    background-color: azure;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 10%;
+}
+
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.input-block {
+    border: 3px solid black;
+    width: 100%;
+    border-radius: 99px;
+    position: relative;
+}
+
+input {
+    width: 68%;
+    padding: 10px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 99px;
+    border: none;
+    outline: none;
+    font-style: italic;
+    background-color: transparent;
+}
+
+.main-btn {
+    position: absolute;
+    right: -1px;
+    padding: 13px 20px;
+    border-radius: 99px;
+    background: linear-gradient(135deg, green, blue);
+    border: none;
+    font-weight: 600;
+    color: white;
+}
+
+.deleteBtn {
+    position: absolute;
+    right: 100px;
+    padding: 13px 20px;
+    border-radius: 99px;
+    background: linear-gradient(135deg, red, black);
+    border: none;
+    font-weight: 600;
+    color: white;
+
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.list ul li {
+    font-size: larger;
+    list-style: none;
+    font-weight: 600;
+    margin-bottom: 10px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(135deg, orange, #4e085f) 1;
+
+}
+
+
+.delbtn {
+    padding: 5px 13px;
+    border-radius: 99px;
+    border: none;
+    background-color: red;
+    position: absolute;
+    right: 10px;
+}
+
+.editbtn {
+    padding: 5px 13px;
+    border-radius: 99px;
+    border: none;
+    background-color: green;
+    position: absolute;
+    right: 100px;
+}
+
+@media (max-width: 768px) {
+    .semi-main {
+        width: 90%;
+    }
+
+    .input-block {
+        border: 2px solid black;
+        width: 80%;
+    }
+
+    input {
+        width: 48%;
+        padding: 5px;
+        font-size: small;
+        font-weight: 300;
+    }
+
+    .main-btn,
+    .deleteBtn {
+        padding: 5px 10px;
+        border-radius: 99px;
+        font-weight: 300;
+    }
+
+    .deleteBtn {
+        right: 80px;
+        padding: 5px 10px;
+        font-weight: 300;
+    }
+
+
+    .delbtn {
+        padding: 2px 8px;
+    }
+
+    .editbtn {
+        padding: 2px 8px;
+        right: 100px;
+    }
+
+
+}
