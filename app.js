@@ -3,6 +3,8 @@ let btn = document.getElementById("btn");
 let list = document.getElementById("list");
 let delAllBtn = document.getElementById("delAllBtn");
 
+list.innerHTML = localStorage.getItem("todos") || "";
+
 function mainTodo() {
     if (todo.value.trim() === "") return;
 
@@ -16,6 +18,8 @@ function mainTodo() {
 
     list.appendChild(li);
     todo.value = "";
+
+    savaTodos();
 }
 
 btn.addEventListener("click", mainTodo);
@@ -28,6 +32,7 @@ function addTodoEnter(event) {
 
 function delTodo(event) {
     event.target.parentNode.remove();
+    savaTodos();
 }
 
 function editTodo(event) {
@@ -43,8 +48,17 @@ function updateTodo(event) {
     input.disabled = true;
     event.target.innerText = "Edit";
     event.target.setAttribute("onclick", "editTodo(event)");
+    savaTodos()
 }
 
 delAllBtn.addEventListener("click", () => {
     list.innerHTML = "";
+    localStorage.removeItem("todos")
 });
+
+
+
+function savaTodos() {
+    localStorage.setItem("todos", list.innerHTML);
+
+}
