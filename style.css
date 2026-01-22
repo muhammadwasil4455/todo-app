@@ -33,6 +33,17 @@ h1 {
     margin-bottom: 30px;
 }
 
+
+h2 {
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+    background: linear-gradient(135deg, green, blue);
+    border-bottom: 4px solid;
+    border-image: linear-gradient(135deg, orange, #4e085f) 1;
+    font-size: 30px;
+}
+
 .input-block {
     border: 3px solid black;
     width: 100%;
@@ -117,6 +128,14 @@ input {
         border: 2px solid black;
         width: 80%;
     }
+
+
+    h2 {
+        padding-top: 20px;
+        border-bottom: 3px solid;
+        font-size: 20px;
+    }
+
 
     input {
         width: 48%;
