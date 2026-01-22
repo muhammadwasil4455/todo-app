@@ -37,7 +37,7 @@ function delTodo(event) {
 
 function editTodo(event) {
     let input = event.target.parentNode.children[0];
-    input.disabled = false;gti
+    input.disabled = false;
     input.focus();
     event.target.innerText = "Update";
     event.target.setAttribute("onclick", "updateTodo(event)");
